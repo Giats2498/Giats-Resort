@@ -18,11 +18,11 @@ function App() {
   <> 
     <Navbar/>
     <Switch>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/rooms" component={Rooms}/>
-      <Route exact path="/rooms/:slug" component={SingleRoom}/>
-      <Route exact path="/contactus" component={ContactUs} />
-      <ProtectedRoute exact path="/reservation" component={Reservation}/>
+      <Route exact path="./" component={Home} />
+      <Route exact path="./rooms" component={Rooms}/>
+      <Route exact path="./rooms/:slug" component={SingleRoom}/>
+      <Route exact path="./contactus" component={ContactUs} />
+      <ProtectedRoute exact path="./reservation" component={Reservation}/>
       <Route component={Error}/>
     </Switch>
     <Footer/>
