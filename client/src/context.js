@@ -32,7 +32,7 @@ class RoomProvider extends Component {
     }
     featuredRooms = () => {
         //axios
-        axios.get('http://localhost:5000/')
+        axios.get('https://fathomless-depths-67432.herokuapp.com/')
         .then(response => {
                 let featuredRooms= this.formatData(response.data);
                 this.setState({
@@ -44,7 +44,7 @@ class RoomProvider extends Component {
     
     allRooms = () => {
         //axios
-        axios.get('http://localhost:5000/rooms')
+        axios.get('https://fathomless-depths-67432.herokuapp.com/rooms')
         .then(response => {
                 let rooms = this.formatData(response.data);
                 let maxPrice = Math.max(...rooms.map(item =>item.price));
@@ -62,7 +62,7 @@ class RoomProvider extends Component {
 
     singleRoom = (slug) => {
         //axios
-        axios.get(`http://localhost:5000/rooms/${slug}`)
+        axios.get(`https://fathomless-depths-67432.herokuapp.com/rooms/${slug}`)
         .then(response => {
                 let rooms = this.formatDataSingleRoom(response.data);
                 this.setState({
@@ -73,7 +73,7 @@ class RoomProvider extends Component {
     };
 
     reservation =(obj) => {
-        return axios.post(`http://localhost:5000/reservation`,obj)
+        return axios.post(`https://fathomless-depths-67432.herokuapp.com/reservation`,obj)
         .then(response => {
             return response;
         });
