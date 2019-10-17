@@ -39,7 +39,7 @@ app.use('/add',postroom);
 app.use('/reservation',reservation);
 
 
-
+app.disable('etag');
 //production mode
 if(process.env.NODE_ENV === 'production') { 
    app.use(express.static('client/build'));  
