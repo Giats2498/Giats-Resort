@@ -18,11 +18,11 @@ function App() {
   <> 
     <Navbar/>
     <Switch>
-      <Route exact path="https://fathomless-depths-67432.herokuapp.com/" component={Home} />
-      <Route exact path="https://fathomless-depths-67432.herokuapp.com/rooms" component={Rooms}/>
-      <Route exact path="https://fathomless-depths-67432.herokuapp.com/rooms/:slug" component={SingleRoom}/>
-      <Route exact path="https://fathomless-depths-67432.herokuapp.com/contactus" component={ContactUs} />
-      <ProtectedRoute exact path="https://fathomless-depths-67432.herokuapp.com/reservation" component={Reservation}/>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/rooms" component={Rooms}/>
+      <Route exact path="/rooms/:slug" component={SingleRoom}/>
+      <Route exact path="/contactus" component={ContactUs} />
+      <ProtectedRoute exact path="/reservation" component={Reservation}/>
       <Route component={Error}/>
     </Switch>
     <Footer/>
