@@ -17,7 +17,7 @@
     "styled-components": "^4.3.2"
   },
   "scripts": {
-    "start": "webpack-dev-server --mode development --hot --inline --content-base=dist --history-api-fallback",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

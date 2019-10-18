@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router} from "react-router-dom";
+import {BrowserRouter as Router,browserHistory} from "react-router-dom";
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {RoomProvider} from './context';
@@ -8,7 +8,7 @@ import ScrollToTop from "./ScrollToTop";
 
 ReactDOM.render(
     <RoomProvider> 
-        <Router>
+        <Router history={browserHistory}>
             <ScrollToTop>
             <App/>
             </ScrollToTop>
