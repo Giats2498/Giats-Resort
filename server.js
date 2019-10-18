@@ -38,13 +38,14 @@ app.use('/reservation',reservation);
 
 
 if (process.env.NODE_ENV === 'production') {
+  express.static(path_join(__dirname, '/client/build'));
   app.get('/*', function(req, res) {   
     res.sendFile(path.join(__dirname, 'client/build/index.html'), function(err) {
       if (err) {
-        res.status(500).send(err)
+        res.status(500).send(err);
       }
-    })
-  })
+    });
+  });
 }
 
 app.listen(port, () => {
