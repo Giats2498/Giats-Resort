@@ -40,14 +40,9 @@ app.use('/reservation',reservation);
 if (process.env.NODE_ENV === 'production') {
   // Set static folder
   app.use(express.static(path.join(__dirname,'client', 'build')));
-  app.get('*', function (req, res) { // This wildcard method handles all requests
-
-    Router.run(routes, req.path, function (Handler, state) {
-        var element = React.createElement(Handler);
-        var html = React.renderToString(element);
-        res.render('main', { content: html });
-    });
-});
+  app.get('/*', function(req, res) {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+  });
 }
 
 app.listen(port, () => {
